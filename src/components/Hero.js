@@ -17,13 +17,35 @@ const HeroWrapper = styled.div`
     overflow: hidden;
     position: relative;
 `
+const HeroSlide = styled.div`
+    
+`
+const HeroSlider = styled.div`
 
+`
+const HeroImage = styled.img`
 
-function Hero() {
+`
+const HeroContent = styled.div`
+
+`
+
+function Hero({slides}) {
     return (
         <HeroSection>
             <HeroWrapper>
-                <h1>Hero</h1>
+                {slides.map((slide, index) => {
+                    return (
+                        <HeroSlide key={index}>
+                            <HeroSlider>
+                                <HeroImage />
+                                <HeroContent>
+                                    <h1>{slide.title}</h1>
+                                </HeroContent>
+                            </HeroSlider>
+                        </HeroSlide>
+                    )
+                })}
             </HeroWrapper>
         </HeroSection>
     )
