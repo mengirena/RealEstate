@@ -8,7 +8,7 @@ function App() {
     <>
     <GlobalStyle />
     <Navbar />
-    <Hero sliders={SliderData}/>
+    <Hero slides={SliderData}/>
     </>
   );
 }
