@@ -39,10 +39,10 @@ const MenuBars = styled(FaBars)`
         height: 30px;
         width: 30px;
         cursor: pointer;
-        // position: absolute;
-        // top: 0;
-        // right: 0;
-        // transform: translate(-70%, 50%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-70%, 50%);
         color: white;
     }
 `

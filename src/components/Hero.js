@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import styled, { css } from 'styled-components/macro'
 import { Button } from './Button'
 import { IoMdArrowRoundForward } from 'react-icons/io'
@@ -28,7 +28,7 @@ const HeroSlide = styled.div`
 const HeroSlider = styled.div`
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -62,11 +62,25 @@ const HeroContent = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 1600px;
-    width: calc(100%-100px);
+    width: calc(100% - 100px);
     color: #fff;
-`
-const Arrow = styled(IoMdArrowRoundForward)`
 
+    h1 {
+        font-size: clamp(1rem, 8vw, 2rem);
+        font-weight: 400;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 20px rgba(0,0,0, 0.8);
+        text-align: left;
+        margin-bottom: .8rem;
+    }
+
+    p {
+        margin-bottom: 1.2rem;
+        text-shadow: 0px 0px 20px rgba(0,0,0, 0.8);
+    }
+ `
+const Arrow = styled(IoMdArrowRoundForward)`
+    margin-left: .5rem;
 `
 
 const SliderButtons = styled.div`
@@ -103,6 +117,22 @@ const NextArrow = styled(IoArrowForward)`
 `
 
 const Hero = ({slides}) => {
+    const [current, setCurrent] = useState(0)
+    const length = slides.length
+    const timeout = useRef(null)
+
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1)
+
+        console.log(current)
+    }
+
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1)
+
+        console.log(current)
+    }
+
     return (
         <HeroSection>
             <HeroWrapper>
@@ -125,8 +155,8 @@ const Hero = ({slides}) => {
                     )
                 })}
                 <SliderButtons>
-                    <PrevArrow></PrevArrow>
-                    <NextArrow></NextArrow>
+                    <PrevArrow onClick= {prevSlide}/>
+                    <NextArrow onClick= {nextSlide}/>
                 </SliderButtons>
             </HeroWrapper>
         </HeroSection>

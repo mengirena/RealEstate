@@ -44,3 +44,16 @@ This is a 1 page landing page.
         font-style: italic;
     `
 ```
+
+### user-select
+
+    
+### object-fit: cover;
+
+image responsive following its ratio
+
+### width: calc(100% - 100px);
+
+responsive and attach to one side
+
+The operator must be surrounded by whitespace (+ and - are mandetory)
