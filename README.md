@@ -57,3 +57,5 @@ image responsive following its ratio
 responsive and attach to one side
 
 The operator must be surrounded by whitespace (+ and - are mandetory)
+
+### When is the state really changed using setState()?
