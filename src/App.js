@@ -6,6 +6,7 @@ import GlobalStyle from "./globalStyles";
 import { useState } from 'react'
 import InfoSection from "./components/InfoSection";
 import { InfoData } from "./data/InfoData";
+import Listings from "./components/Listings";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <Dropdown isOpen={isOpen} toggle={toggle}/>
     <Hero slides={SliderData}/>
     <InfoSection {...InfoData}/>
+    <Listings />
     </>
   );
 }
