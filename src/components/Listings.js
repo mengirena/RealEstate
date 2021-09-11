@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 import { IoMdArrowForward } from 'react-icons/io'
 import HomeOne from '../images/home-1.jpeg'
