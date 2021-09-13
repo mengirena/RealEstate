@@ -7,6 +7,7 @@ import { useState } from 'react'
 import InfoSection from "./components/InfoSection";
 import { InfoData } from "./data/InfoData";
 import Listings from "./components/Listings";
+import Features from "./components/Features";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <Hero slides={SliderData}/>
     <InfoSection {...InfoData}/>
     <Listings />
+    <Features />
     </>
   );
 }
