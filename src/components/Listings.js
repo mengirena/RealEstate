@@ -14,7 +14,7 @@ const Section = styled.section`
 const Container = styled.div`
     height: 100%;
     width:100%;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
 `
 const Heading = styled.div`
     font-size: 1.5rem;
