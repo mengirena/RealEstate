@@ -8,6 +8,7 @@ import InfoSection from "./components/InfoSection";
 import { InfoData, InfoDataTwo } from "./data/InfoData";
 import Listings from "./components/Listings";
 import Features from "./components/Features";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -19,15 +20,15 @@ function App() {
 
   return (
     <>
-    <GlobalStyle />
-    <Navbar toggle={toggle}/>
-    <Dropdown isOpen={isOpen} toggle={toggle}/>
-    <Hero slides={SliderData}/>
-    <InfoSection {...InfoData}/>
-    <Listings />
-    <Features />
-    <InfoSection {...InfoDataTwo}/>
-
+      <GlobalStyle />
+      <Navbar toggle={toggle}/>
+      <Dropdown isOpen={isOpen} toggle={toggle}/>
+      <Hero slides={SliderData}/>
+      <InfoSection {...InfoData}/>
+      <Listings />
+      <Features />
+      <InfoSection {...InfoDataTwo}/>
+      <Footer />
     </>
   );
 }

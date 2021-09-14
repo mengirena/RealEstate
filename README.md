@@ -61,3 +61,5 @@ The operator must be surrounded by whitespace (+ and - are mandetory)
 ### When is the state really changed using setState()?
 
 ### styled-components/macro vs styled-components
+
+### rel="noopener noreferrer" mean in a element
